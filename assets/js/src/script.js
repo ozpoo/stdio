@@ -180,6 +180,7 @@
 		var setFlky = function() {
 			if($(".flky").length) {
 				$flky = new Flickity('.flky', {
+					fullscreen: true,
 					accessibility: true,
 					adaptiveHeight: false,
 					autoPlay: false,
