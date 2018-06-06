@@ -496,7 +496,6 @@ small {
   opacity: 0;
 
   &.show {
-    pointer-events: all;
     opacity: 1;
   }
 }
@@ -620,6 +619,13 @@ main {
 
 .about {
 
+  main {
+    padding-bottom: $margin;
+    p {
+      padding-top: $margin-02;
+    }
+  }
+
   h1 {
     padding-right: 20vw;
   }
@@ -627,6 +633,13 @@ main {
 
 .contact {
 
+  main {
+    padding-bottom: $margin;
+
+    p {
+      padding-top: $margin-02;
+    }
+  }
 }
 
 footer {
