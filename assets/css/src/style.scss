@@ -599,6 +599,8 @@ main {
           justify-content: center;
           align-items: center;
           padding: 0 $margin-02;
+          max-width: 620px;
+          min-width: 320px;
 
           p, h4 {
             padding: $margin-02 $margin-02;
