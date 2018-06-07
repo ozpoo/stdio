@@ -220,10 +220,22 @@ $margin-02: calc(10px + 1.2vw);
 	}
 }
 
+html {
+  &.is-flickity-fullscreen {
+    main {
+      z-index: 100;
+    }
+  }
+}
+
 body, html {
+  width: 100vw;
+}
+
+body {
 	font-family: $font-copy;
   font-size: 16px;
-  font-size: calc(12px + .3vw);
+  font-size: calc(12px + .36vw);
   line-height: 1.4;
   font-weight: normal;
   color: $black;
@@ -242,12 +254,6 @@ body, html {
       .st1 {
         fill: $blue;
       }
-    }
-  }
-
-  &.is-flickity-fullscreen {
-    main {
-      z-index: 100;
     }
   }
 
@@ -652,6 +658,10 @@ main {
 }
 
 .about {
+
+  .wordz {
+    border-bottom: 3px solid $white;
+  }
 
   main {
     padding-bottom: $margin;

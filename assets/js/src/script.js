@@ -2,7 +2,48 @@
 
 	$(function () {
 
-		var $lastScrollTop, $scrollTop, $current, $flky, $options;
+		var $lastScrollTop, $scrollTop, $current, $flky, $options, $humans;
+
+		$humans = [
+			"strong",
+			"worthy",
+			"compelling",
+			"compassionate",
+			"understanding",
+			"connected",
+			"thoughtful",
+			"caring",
+			"chaotic",
+			"simple",
+			"friendly",
+			"vulnerable",
+			"unique",
+			"daring",
+			"remarkable",
+			"different",
+			"healing",
+			"purposeful",
+			"curious",
+			"courageous",
+			"hopefull",
+			"inspiring",
+			"innovative",
+			"adventurous",
+			"loving",
+			"contemplative",
+			"dedicated",
+			"creative",
+			"strategic",
+			"unexpected",
+			"quirky",
+			"driven",
+			"inventive",
+			"passionate",
+			"proud",
+			"refined",
+			"disheveled",
+			"predictable",
+		];
 
 		$(document).ready(function() {
 
@@ -11,6 +52,11 @@
 		$(window).load(function() {
 			init();
 			animate();
+		});
+
+
+		$(window).resize(function() {
+
 		});
 
 		var init = function() {
@@ -30,6 +76,9 @@
 			setTimeout(function(){
 				$(".intro").removeClass("show");
 			}, 2800);
+			if($(".about").length) {
+				setHumans();
+			}
 		};
 
 		var setSmoothState = function() {
@@ -215,6 +264,13 @@
 				$(".logo, .menu-main").removeClass("show");
 				$current = "hide";
 			}
+		};
+
+		var setHumans = function() {
+			setInterval(function(){
+				var item = $humans[Math.floor(Math.random()*$humans.length)];
+				$(".wordz").html(item);
+			}, 2800);
 		};
 
 		var requestAnimationFrame = function() {
