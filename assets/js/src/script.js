@@ -76,9 +76,7 @@
 			setTimeout(function(){
 				$(".intro").removeClass("show");
 			}, 2800);
-			if($(".about").length) {
-				setHumans();
-			}
+			setHumans();
 		};
 
 		var setSmoothState = function() {
@@ -242,7 +240,7 @@
 					selectedAttraction: 0.1,
 					friction: 1,
 					groupCells: false,
-					initialIndex: 2,
+					initialIndex: 1,
 					lazyLoad: false,
 					percentPosition: true,
 					prevNextButtons: false,
@@ -268,8 +266,10 @@
 
 		var setHumans = function() {
 			setInterval(function(){
-				var item = $humans[Math.floor(Math.random()*$humans.length)];
-				$(".wordz").html(item);
+				if($(".about").length) {
+					var item = $humans[Math.floor(Math.random()*$humans.length)];
+					$(".wordz").html(item);
+				}
 			}, 2800);
 		};
 
