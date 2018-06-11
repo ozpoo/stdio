@@ -20,6 +20,15 @@
 									class="lazyload" />
 							</figure>
 						</button>
+						<div class="description">
+							<h5><?php the_title(); ?></h5>
+							<p class="category">
+									<?php $term_list = wp_get_post_terms($post->ID, 'work_category', array("fields" => "all")); ?>
+								<?php foreach ( $term_list as $term ): ?>
+						    	<span><?php echo $term->name; ?></span>
+								<?php endforeach; ?>
+							</p>
+						</div>
 					</article>
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
