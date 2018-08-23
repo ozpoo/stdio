@@ -75,7 +75,7 @@
 			reveal();
 			setTimeout(function(){
 				$(".intro").removeClass("show");
-			}, 2800);
+			}, 2000);
 			setHumans();
 		};
 
@@ -153,6 +153,11 @@
 					Cookies.set('stdio-promo', 'nailed-it', { expires: 7 });
 				}, 8000);
 			}
+			if($(".home").length) {
+				setTimeout(function(){
+					$flky.next();
+				}, 1400);
+			}
 		};
 
 		var hide = function() {
@@ -227,7 +232,7 @@
 		var setFlky = function() {
 			if($(".flky").length) {
 				$flky = new Flickity('.flky', {
-					fullscreen: true,
+					fullscreen: false,
 					accessibility: true,
 					adaptiveHeight: false,
 					autoPlay: false,

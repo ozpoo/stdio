@@ -30,29 +30,21 @@
 							</p>
 						</div>
 						<div class="flex">
-							<h5>Chat</h5>
-							<ul>
+							<h5>Connect</h5>
+							<ul class="tight-bottom">
 								<li><a href="mailto:hello@stdio.com">hello@stdio.com</a></li>
 							</ul>
 						</div>
 						<div class="flex">
-							<h5>Social</h5>
-							<ul>
-								<li><a href="https://www.facebook.com/goodprco/" target="_blank">Facebook</a></li>
-								<li><a href="https://twitter.com/goodprco/" target="_blank">Twitter</a></li>
-								<li><a href="https://www.instagram.com/goodprco/" target="_blank">Instagram</a></li>
-								<li><a href="https://www.linkedin.com/goodprco/" target="_blank">LinkedIn</a></li>
-							</ul>
-						</div>
-						<div class="flex">
 							<h5>Menu</h5>
-							<ul>
-								<li><a href="<?php echo site_url('/about', 'http'); ?>">About</a></li>
-								<li><a href="<?php echo site_url('/contact', 'http'); ?>">Contact</a></li>
+							<ul class="tight-bottom">
+								<li><a href="<?php echo site_url('/', 'http'); ?>">Work</a></li>
+								<li><a href="<?php echo site_url('/about/', 'http'); ?>">About</a></li>
+								<li><a href="<?php echo site_url('/contact/', 'http'); ?>">Contact</a></li>
 							</ul>
 						</div>
 					</section>
-					<p class="copy">This site is protected by copyright. &copy;2018 Stdio Designs llc.</p>
+					<p class="copy"><small>This site is protected by copyright. &copy;2018 Stdio Designs llc.</small></p>
 				</footer>
 			</div>
 		</section>

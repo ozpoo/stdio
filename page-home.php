@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
 		<main role="main">
+			<h1>Works by stdiø</h1>
 			<section class="slider">
 				<section class="works flky">
 					<?php
@@ -21,13 +22,14 @@
 							</figure>
 						</button>
 						<div class="description">
-							<h5><?php the_title(); ?></h5>
+							<!-- <h5><?php the_title(); ?></h5>
 							<p class="category">
 									<?php $term_list = wp_get_post_terms($post->ID, 'work_category', array("fields" => "all")); ?>
 								<?php foreach ( $term_list as $term ): ?>
 						    	<span><?php echo $term->name; ?></span>
 								<?php endforeach; ?>
-							</p>
+								<?php the_excerpt(); ?>
+							</p> -->
 						</div>
 					</article>
 					<?php endwhile; ?>

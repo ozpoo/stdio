@@ -187,7 +187,8 @@
 }
 
 $white: rgb(255,255,255);
-$black: rgb(160,160,160);
+// $black: rgb(160,160,160);
+$black: rgb(0,0,0);
 $black-light: rgb(113,117,113);
 $black-lighter: rgb(192,194,192);
 $black-about: rgb(92,97,92);
@@ -230,14 +231,14 @@ html {
 
 //Safari font scale fix
 body, html {
-  width: 100vw;
+  min-width: 100%;
 }
 
 body {
 	font-family: $font-copy;
   font-size: 16px;
-  font-size: calc(12px + .36vw);
-  line-height: 1.4;
+  font-size: calc(12px + .46vw);
+  line-height: 1.3;
   font-weight: normal;
   color: $black;
   background: $white;
@@ -294,6 +295,12 @@ body {
     .st1 {
       fill: $white;
     }
+    .intro {
+
+      .st2 {
+        fill: $white;
+      }
+    }
   }
 
   &[data-background=contact] {
@@ -314,6 +321,12 @@ body {
 
     .st1 {
       fill: $white;
+    }
+    .intro {
+
+      .st2 {
+        fill: $white;
+      }
     }
   }
 
@@ -347,7 +360,6 @@ img {
 
 p, ul, ol, h1, h2, h3, h4, h5 {
   padding: $margin $margin;
-  padding-bottom: 0px;
 }
 
 h1, h2, h3, h4, h5, strong {
@@ -395,6 +407,8 @@ button {
 
 small {
   font-size: .8em;
+  font-family: $font-mono;
+  letter-spacing: .03em;
 }
 
 .spin {
@@ -528,9 +542,10 @@ header {
 
   .logo {
     flex: 1;
+    position: absolute;
 
     svg {
-      width: calc(36px + 2vw);
+      width: calc(38px + 2vw);
       height: auto;
       vertical-align: middle;
       display: inline-block;
@@ -569,21 +584,24 @@ main {
     opacity: 1;
 
     &.is-selected {
-      background: $blue;
+      background: $black;
     }
   }
 }
 
 .home {
   h1 {
-    padding-top: $margin;
+    padding-top: 0px;
     padding-right: 20vw;
     padding-bottom: $margin;
+    display: block;
+    position: sticky;
+    left: 0;
+    width: 100vw;
   }
 
   .slider {
     position: relative;
-    padding-top: $margin;
 
     .button--previous {
       position: absolute;
@@ -688,31 +706,42 @@ main {
     border-bottom: 3px solid $white;
   }
 
-  main {
-    padding-bottom: $margin;
-    p {
-      padding-top: $margin-02;
-    }
-  }
-
   h1 {
     padding-right: 20vw;
+  }
+
+  .text-content {
+    width: 50vw;
   }
 }
 
 .contact {
+  h1 {
+    padding-right: 20vw;
+  }
 
-  main {
-    padding-bottom: $margin;
-
-    p {
-      padding-top: $margin-02;
-    }
+  .text-content {
+    width: 50vw;
   }
 }
 
 footer {
+  width: 100vw;
+  position: sticky;
+  left: 0;
   padding-bottom: $margin;
+
+  p, ul, h5 {
+    padding-bottom: 0;
+  }
+
+  .tight-bottom {
+    padding-bottom: $margin-02;
+  }
+
+  .tight-top {
+    padding-top: 0;
+  }
 
   .flexer {
     display: flex;
@@ -722,17 +751,13 @@ footer {
       flex: 1;
 
       &.logo {
-        flex: 3;
+        flex: 2;
 
         svg {
-          width: calc(36px + 2vw);
+          width: calc(38px + 2vw);
           height: auto;
           vertical-align: middle;
           display: inline-block;
-        }
-
-        .big-bottom {
-          padding-bottom: $margin;
         }
       }
     }
@@ -740,9 +765,6 @@ footer {
 
   .copy {
     padding-top: $margin;
-    font-family: $font-mono;
-    letter-spacing: .12em;
-    font-size: .7em;
   }
 }
 
